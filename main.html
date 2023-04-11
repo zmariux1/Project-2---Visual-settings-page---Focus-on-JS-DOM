@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Settings - Main Page </title>
+  <link rel="stylesheet" href="CSS/design.CSS">
+</head>
+
+<body>
+  <div class="main_page">
+    <div class="left_main_page">
+      <div class="fixed_hover">1.1
+        <button class="visual_aspect left_list fake">Visual Settings</button>;
+        <button class="profile left_list" onclick="window.location.href='https://www.linkedin.com/in/zmariux/';">User
+          Profile</button>;
+        <button class="feedback left_list">Feedback</button>;
+        <button class="administrator left_list">Administrator</button>;
+        <!-- aici e userul -->
+        <button class="open-buttonUser log_user left_list " id="idLog_user">Login User</button>;
+
+
+        <div class="overlayUser"></div>
+        <div class="popupUser">
+          <h2>Login Form</h2>
+          <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="Type e-mail or phone number" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Type your password" name="password" required>
+            <input type="submit" value="Login">
+          </form>
+          <a class="closeUser" href="#">X</a>
+        </div>
+        <!-- aici se termina userul -->
+
+      </div>
+    </div>
+    <div class="right_main_page">
+      <p></p>
+      <h1 class="dom_title test_dev_mode_setings_on">DOM (Document Object Model) </h1>
+      <h1 class="dom_title"> Visual Settings </h1>
+      <div class="popup-wrap">
+        <div class="popup">
+          <div class="popup-close">x</div>
+          <div class="popup-content">
+            <h2>Pick a color:</h2>
+            <button class="green list-of-colors"></button>
+            <button class="red list-of-colors"></button>
+            <button class="pink list-of-colors"></button>
+            <button class="purple list-of-colors"></button>
+            <button class="orange list-of-colors"></button>
+            <button class="yellow list-of-colors"></button>
+            <button class="white list-of-colors"></button>
+            <button class="brown list-of-colors"></button>
+          </div>
+        </div>
+      </div>
+      <div class="check_div1 first_check_div">
+        <input class="check_main" id="NightMode" type="checkbox" onclick="funcNightNMode()">
+        <p class="text_main_check test_dev_mode_setings_off">Night Mode</p>
+        <p class="test_dev_mode_setings_on">I'm using the querySelector to connect to the right side main background,
+          and there I change the div's atribute</p>
+      </div>
+      <div class="check_div1">
+        <input class="check_main" id="Eyesight" type="checkbox" onclick="funtFontSize()">
+        <p class="text_main_check test_dev_mode_setings_off">Eyesight Impairment - Font Size Increase</p>
+        <p class="test_dev_mode_setings_on">Here, i'm using the querySelectorAll, because i need to change multiple
+          elements. In order to change multiple classes, i'm using .forEach to change the font size atribute </p>
+      </div>
+      <div class="check_div1">
+        <input class="check_main" id="spacingRows" type="checkbox" onclick="funcSpacingRows()">
+        <p class="text_main_check test_dev_mode_setings_off">Increase the space between the settings - Increase
+          visibility</p>
+        <p class="test_dev_mode_setings_on">This is increasing the div's paddingTop 2x</p>
+      </div>
+      <div class="check_div1">
+        <input class="check_main" id="changeThemes" type="checkbox" onclick="funcChangeThemes()">
+        <p class="text_main_check test_dev_mode_setings_off">Change Themes (popup with 8 culors)</p>
+        <p class="test_dev_mode_setings_on">Force the popup window (initialy displaed None) to reapear.
+          The popup has 8 buttons which listens the user's command on click to trigger an atribute change of a div's
+          backgrownd color.
+          It's also unchecking the box, if the user clicks outside the box or the X </p>
+
+      </div>
+      <div class="check_div1">
+        <input class="check_main" id="developer" type="checkbox" onclick="funcdeveloper()">
+        <p class="text_main_check dev_style test_dev_mode_setings_off">Unlock the developer's mode (Writes everything
+          from the
+          Developer's perspective)</p>
+        <p class="test_dev_mode_setings_on">Unloked the developer perspective and new Settings</p>
+      </div>
+
+      <div class="check_div1 dev-hidden-div">
+        <input class="check_main" id="divResize" type="checkbox" onclick="funcdivResize()">
+        <p class="text_main_check unique-div">change div size live (Not Available yet)</p>
+      </div>
+      <div class="check_div1 dev-hidden-div">
+        <input class="check_main" type="checkbox" onclick="isChecked()">
+        <p class="text_main_check unique-div">Something pretty (Not Available yet)</p>
+      </div>
+      <div class="check_div1 dev-hidden-div">
+        <input class="check_main" type="checkbox" onclick="isChecked()">
+        <p class="text_main_check unique-div">Something pretty (Not Available yet)</p>
+      </div>
+      <div class="check_div1 dev-hidden-div">
+        <input class="check_main" type="checkbox" onclick="isChecked()">
+        <p class="text_main_check unique-div">Something pretty (Not Available yet)</p>
+      </div>
+
+      <div class="check_div1">
+        <input class="reset-me" id="idreset" type="checkbox" onclick="funcResetMe()">
+        <p class="text_main_check test_dev_mode_setings_off">Reset Settings</p>
+        <p class="test_dev_mode_setings_on">Forces the page to refresh to changes back all the checkboxes to unchecked
+        </p>
+      </div>
+
+
+    </div>
+  </div>
+  <script src="JS/background.js"></script>
+</body>
+
+</html>
